@@ -630,7 +630,7 @@ struct ReplaceRegexpImpl
     {
         re2_st::StringPiece matches[max_captures];
 
-        int start_pos = 0;
+        decltype(input.length()) start_pos = 0;
         while (start_pos < input.length())
         {
             /// If no more replacements possible for current string
